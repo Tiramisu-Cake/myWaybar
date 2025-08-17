@@ -1,0 +1,22 @@
+/* Минимальная тема: читаемо и без лишней «косметики» */
+* {
+  font-family: monospace;
+  font-size: 13px;
+}
+
+window#waybar {
+  background: #1e1e1e;
+  color: #e0e0e0;
+}
+
+#clock, #battery, #network, #pulseaudio, #workspaces, #window {
+  padding: 0 8px;
+}
+
+#language { padding: 0 8px; font-weight: 600; }
+
+/* Активное рабочее пространство слегка подсветим */
+#workspaces button.active {
+  background: #333333;
+  border-radius: 6px;
+}
