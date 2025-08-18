@@ -21,9 +21,9 @@
 	  "format": "{}",        
 	  "format-en": "EN",
 	  "format-ru": "RU",
-    	  "keyboard-name": "microsoft-surface-type-cover-keyboard",
+    	  "keyboard-name": "at-translated-set-2-keyboard",
     	  "min-length": 2,
-    	  "on-click": "hyprctl switchxkblayout at-translated-set-2-keyboard next"
+    	  "on-click": "hyprctl switchxkblayout 'AT translated Set 2 keyboard' next"
   },
   
 // Часы: 24-часовой формат, всплывающая подсказка — полная дата
