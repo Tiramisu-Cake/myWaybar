@@ -12,11 +12,13 @@
   "modules-center": ["clock"],
 
   "modules-right": [
+    "tray",
     "custom/pomodoro",
     "bluetooth",
     "network",
     "pulseaudio", 
     "backlight",
+    "hyprland/language",
     "battery",
   ],
 
@@ -26,6 +28,12 @@
       "active": "",
       "default": ""
     }
+  },
+
+  "tray": {
+    "icon-size": 18,         
+    "spacing": 6,             
+    "show-passive-items": true 
   },
 
   "bluetooth": {
@@ -94,6 +102,14 @@
         "format": "{icon}  {percent}%",
         "format-icons": ["","󰃜", "󰃛", "󰃞","󰃝","󰃟","󰃠"],
         "tooltip": false
+  },
+
+  "hyprland/language": {
+      "format": "{}",   
+      "format-en": "EN",    
+      "format-ru": "RU",   
+      "keyboard-name": "at-translated-set-2-keyboard",
+      "tooltip": false
   },
   
   "pulseaudio": {
