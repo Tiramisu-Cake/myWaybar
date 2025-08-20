@@ -1,0 +1,21 @@
+/* Минимальная тема: читаемо и без лишней «косметики» */
+* {
+  font-family: "FiraCode Nerd Font Mono";
+  font-size: 13px;
+  letter-spacing: 0;
+}
+
+window#waybar {
+  background: #1e1e1e;
+  color: #ededed;
+}
+
+#clock, #battery, #network, #pulseaudio, #workspaces, #window #language {
+  padding: 0 4px;
+}
+
+/* Активное рабочее пространство слегка подсветим */
+#workspaces button.active {
+  background: #333333;
+  border-radius: 6px;
+}

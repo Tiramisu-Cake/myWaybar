@@ -1,0 +1,58 @@
+{
+  // Панель поверх окон, вверху экрана
+  "layer": "top",
+  "position": "top",
+
+  // Простейшая раскладка: слева — рабочие столы и активное окно,
+  // по центру — часы, справа — звук, сеть, батарея
+  "modules-left":   ["hyprland/workspaces", "hyprland/window"],
+  "modules-center": ["clock"],
+  "modules-right":  ["tray", "pulseaudio", "network", "hyprland/language", "battery"],
+  
+  "tray": { "icon-size": 16, "spacing": 8},
+
+  "hyprland/window": { 
+	  "max-length": 60, 
+	  "scrolling": true, 
+	  "scrolling-speed": 0.5 
+  },
+
+  "hyprland/language": {
+	  "format": "{}",        
+	  "format-en": "EN",
+	  "format-ru": "RU",
+    	  "keyboard-name": "at-translated-set-2-keyboard",
+    	  "min-length": 2,
+    	  "on-click": "hyprctl switchxkblayout 'AT translated Set 2 keyboard' next"
+  },
+  
+// Часы: 24-часовой формат, всплывающая подсказка — полная дата
+  "clock": {
+    "format": "{:%H:%M}",
+    "tooltip-format": "{:%A, %d %B %Y}"
+  },
+
+  // Звук через PulseAudio-совместимость (PipeWire поддерживается)
+  "pulseaudio": {
+    "format": "{volume}%",
+    "format-muted": "muted",
+    "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+    "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
+    "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%"
+  },
+
+  // Сеть: короткие подписи; если отключено — крестик
+  "network": {
+    "format-wifi": "{essid} {signalStrength}%",
+    "format-ethernet": "eth",
+    "format-disconnected": "×"
+  },
+
+  // Батарея: проценты; состояния на будущее (пороговые)
+  "battery": {
+    "format": "{capacity}%",
+    "format-charging": "{capacity}% →",
+    "states": { "warning": 20, "critical": 10 }
+  }
+}
+
