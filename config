@@ -14,7 +14,6 @@
   "modules-right": [
     "tray",
     "custom/pomodoro",
-    "bluetooth",
     "network",
     "pulseaudio", 
     "backlight",
@@ -34,20 +33,6 @@
     "icon-size": 18,         
     "spacing": 6,             
     "show-passive-items": true 
-  },
-
-  "bluetooth": {
-    "format": "󰂲",
-    "format-on": "{icon}",
-    "format-off": "{icon}", 
-    "format-connected":"{icon}",
-    "format-icons":{
-        "on":"󰂯",
-        "off": "󰂲",
-        "connected": "󰂱",
-        },
-    "on-click": "blueman-manager",
-    "tooltip-format-connected":"{device_enumerate}"
   },
 
   "custom/music": {
