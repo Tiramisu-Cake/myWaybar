@@ -46,10 +46,21 @@
   },
 
   "clock": {
+    "locale": "en_US.UTF-8",
     "timezone": "Asia/Dubai",
-    "tooltip": false,
+    "tooltip": true,
     "format": "{:%H:%M:%S  -  %A, %d %b}",
-    "interval": 1
+    "interval": 1,
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "calendar": {
+      "mode": "month",
+      "weeks-pos": "left"
+    },
+    "actions": {
+      "on-click-right": "mode",       
+      "on-scroll-up": "shift_up",    
+      "on-scroll-down": "shift_down"
+    }
   },
 
   "network": {
